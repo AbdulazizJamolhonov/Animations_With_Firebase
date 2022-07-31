@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/p8"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.175"
+        app:layout_constraintWidth_percent="0.275" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/p1"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.275" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/p6"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.175"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.275" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/p7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.175"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.275" />
+
+    <ImageView
+        android:id="@+id/image5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/p5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.175"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.275" />
+
+    <ImageView
+        android:id="@+id/image6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/p2"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.175"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.275" />
+
+    <ImageView
+        android:id="@+id/image7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/p3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.275" />
+
+    <ImageView
+        android:id="@+id/image8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/p4"
+        app:layout_constraintHeight_percent="0.175"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.275" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#0044FF"
+        android:text="Start"
+        android:textSize="20sp"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/start"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/p8"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/image44"
+            app:layout_constraintEnd_toStartOf="@id/image22"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageView
+            android:id="@+id/image22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/p1"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/mainImage"
+            app:layout_constraintEnd_toStartOf="@id/image33"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/image11"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageView
+            android:id="@+id/image33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/p6"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/image55"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/image22"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageView
+            android:id="@+id/image44"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/p7"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/image66"
+            app:layout_constraintEnd_toStartOf="@+id/mainImage"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image11"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageView
+            android:id="@+id/image55"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/p5"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/image88"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@+id/mainImage"
+            app:layout_constraintTop_toBottomOf="@id/image33"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageView
+            android:id="@+id/image66"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/p2"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/image77"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image44"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageView
+            android:id="@+id/image77"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/p3"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/image88"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/image66"
+            app:layout_constraintTop_toBottomOf="@+id/mainImage"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <ImageView
+            android:id="@+id/image88"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/p4"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toEndOf="@id/image77"
+            app:layout_constraintTop_toBottomOf="@id/image55"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <FrameLayout
+            android:id="@+id/mainImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/image77"
+            app:layout_constraintEnd_toStartOf="@id/image55"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toEndOf="@id/image44"
+            app:layout_constraintTop_toBottomOf="@id/image22"
+            app:layout_constraintWidth_percent="0.4">
+
+            <ImageView
+                android:id="@+id/image111"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/p8"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/image222"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/p1"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/image333"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/p2"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/image444"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/p3"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/image555"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/p7"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/image666"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/p4"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/image777"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/p6"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/image888"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/p5"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
