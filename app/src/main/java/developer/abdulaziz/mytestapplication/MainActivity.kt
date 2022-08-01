@@ -50,25 +50,28 @@ class MainActivity : AppCompatActivity() {
                 arrayListOf(image11, image22, image33, image44, image55, image66, image77, image88)
             handler = Handler(mainLooper)
 
-            databaseReference.setValue("else")
             start.setOnClickListener { databaseReference.setValue("start") }
 
             databaseReference.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    if (snapshot.value.toString() == "start") {
-                        value = false
-                        val anim = AnimationUtils.loadAnimation(this@MainActivity, R.anim.anim9)
-                        binding.start.startAnimation(anim)
-                        handler.postDelayed(r1, 100)
-                    } else {
-                        myAnim1()
-                        myAnim2()
-                        myAnim3()
-                        myAnim4()
-                        myAnim5()
-                        myAnim6()
-                        myAnim7()
-                        myAnim8()
+                    when (snapshot.value.toString()) {
+                        "start" -> {
+                            value = false
+                            binding.start.visibility = View.INVISIBLE
+                            handler.postDelayed(r1, 100)
+                        }
+                        "else" -> {
+                            value = true
+                            binding.start.visibility = View.VISIBLE
+                            myAnim1()
+                            myAnim2()
+                            myAnim3()
+                            myAnim4()
+                            myAnim5()
+                            myAnim6()
+                            myAnim7()
+                            myAnim8()
+                        }
                     }
                 }
 
@@ -175,7 +178,6 @@ class MainActivity : AppCompatActivity() {
 
     private val r1 = object : Runnable {
         override fun run() {
-            binding.start.visibility = View.GONE
             if (count == 8) {
                 count = 0
                 handler.postDelayed(r2, 1)
@@ -192,56 +194,42 @@ class MainActivity : AppCompatActivity() {
         override fun run() {
             if (count == 8) {
                 count = 0
-                for (i in list.indices) {
-                    list[i].scaleX = 1f
-                    list[i].scaleY = 1f
-                    list[i].alpha = 1f
-                    list[i].visibility = View.INVISIBLE
-                }
-                mExplosionField.clear()
                 handler.postDelayed(r3, 1)
                 return
             } else {
-                mExplosionField.explode(list[count])
+                list2[count].visibility = View.VISIBLE
                 ++count
-                handler.postDelayed(this, 500)
+                handler.postDelayed(this, 125)
             }
         }
     }
     private val r3 = object : Runnable {
         override fun run() {
-            if (count == 8) {
-                count = 0
-                handler.postDelayed(r4, 1)
-                return
-            } else {
-                list2[count].visibility = View.VISIBLE
-                ++count
-                handler.postDelayed(this, 100)
+            for (i in list.indices) {
+                mExplosionField.explode(list[i])
+                mExplosionField.explode(list2[i])
             }
+            handler.postDelayed(r4, 1000)
         }
     }
 
     private val r4 = object : Runnable {
         override fun run() {
-            if (count == 8) {
-                count = 0
-                for (i in list2.indices) {
-                    list2[i].scaleX = 1f
-                    list2[i].scaleY = 1f
-                    list2[i].alpha = 1f
-                    list2[i].visibility = View.INVISIBLE
-                }
-                mExplosionField.clear()
-                value = true
-                binding.start.visibility = View.VISIBLE
-                databaseReference.setValue("else")
-                return
-            } else {
-                mExplosionField.explode(list2[count])
-                ++count
-                handler.postDelayed(this, 10)
+            for (i in list2.indices) {
+                list[i].scaleX = 1f
+                list[i].scaleY = 1f
+                list[i].alpha = 1f
+                list[i].visibility = View.INVISIBLE
             }
+            mExplosionField.clear()
+            for (i in list2.indices) {
+                list2[i].scaleX = 1f
+                list2[i].scaleY = 1f
+                list2[i].alpha = 1f
+                list2[i].visibility = View.INVISIBLE
+            }
+            mExplosionField.clear()
+            databaseReference.setValue("else")
         }
     }
 }
